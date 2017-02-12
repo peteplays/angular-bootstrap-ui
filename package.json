@@ -27,7 +27,6 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.6",
     "bunyan": "^1.8.1",
-    "cors": "^2.8.1",
     "express": "^4.13.4",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
