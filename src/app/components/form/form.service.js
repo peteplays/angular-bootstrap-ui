@@ -4,11 +4,7 @@ module.exports = ['$http', '$q',  function ($http, $q) {
       var deferred = $q.defer();
       $http({
         method: 'GET',
-        url: DB_URL+'getPatient/'+patientId,
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
+        url: DB_URL+'getPatient/'+patientId
       })
         .then(function(d) {
           return deferred.resolve(d);

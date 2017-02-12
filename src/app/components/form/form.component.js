@@ -8,9 +8,7 @@ module.exports = angular.module('Form', [])
       this.showAddFields = ($location.path() == '/new') ? true : false;
       this.drugs = [];
       this.reactions = [];
-
-      console.log(patientId);
-
+      
       this.getPatient = function(patientId)  {
         formService.getPatient(patientId)
           .then(function(d) {
