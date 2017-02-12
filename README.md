@@ -11,7 +11,7 @@
 `npm build`
 
 ### Run
-`npm dev` - starts server with live reload at `http://localhost:5555/`
+`npm run dev` or `gulp` - starts server with live reload at `http://localhost:5555/`
 
 `npm start` - starts server at `http://localhost:4000/`
 

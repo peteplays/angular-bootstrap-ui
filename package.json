@@ -5,6 +5,7 @@
   "main": "src/api/index.js",
   "scripts": {
     "build": "gulp bundle",
+    "dev": "gulp",
     "start": "node src/api/index.js",
     "test": "gulp test-local"
   },
