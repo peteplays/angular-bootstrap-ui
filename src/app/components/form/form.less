@@ -1,0 +1,24 @@
+@import '../../vars.less';
+
+.form-section{
+  margin-bottom: 15px;
+  .form-group {
+    margin-bottom: 5px;
+  }
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid lighten(@color-1, 20%);
+  }
+  .submit-btn{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-color: darken(@color-1, 20%);
+    border: 1px solid darken(@color-1, 10%);
+    color: #777;
+    &:hover{
+      background-color: darken(@color-1, 10%);
+      border: 1px solid darken(@color-1, 20%);
+    }
+  }
+}

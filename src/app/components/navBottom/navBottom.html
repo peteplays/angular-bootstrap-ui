@@ -1,0 +1,11 @@
+<div class="btn-group btn-group-justified" role="group">
+  <div class="btn-group" ng-repeat="nav in $ctrl.nav track by $index">
+    <a type="button"
+            class="btn btn-info"
+            href="{{nav.link}}"
+            ng-class="{'active': $ctrl.currentPage == '{{nav.link}}'}"
+          >
+          {{nav.display}}
+    </a>
+  </div>
+</div>

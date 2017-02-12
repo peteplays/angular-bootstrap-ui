@@ -1,0 +1,12 @@
+<hr>
+<div class="form-group" ng-repeat="(key,val) in $ctrl.record track by $index">
+  <label>
+    {{$ctrl.addSpacesToCamelCase(key)}}
+  </label>
+  <input type="text"
+         class="form-control"
+         placeholder="{{$ctrl.addSpacesToCamelCase(key)}}"
+         ng-model="$parent.$parent.$ctrl.formData.patient[$ctrl.type][$ctrl.arrIndex][key]"
+         ng-value="val"
+        >
+</div>

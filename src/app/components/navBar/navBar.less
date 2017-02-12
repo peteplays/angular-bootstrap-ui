@@ -1,0 +1,21 @@
+@import '../../vars.less';
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: lighten(@color-1, 10%);
+  border: 1px solid darken(@color-1, 10%);
+  border-radius: 0 0 4px 4px;
+}
+
+.navbar-default .navbar-nav>li {
+  &:hover{
+    background-color: darken(@color-1, 5%);
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.navbar-default {
+  background-color: @color-1;
+  border-color: darken(@color-1, 10%);
+}

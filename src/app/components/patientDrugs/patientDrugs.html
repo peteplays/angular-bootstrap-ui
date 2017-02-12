@@ -1,0 +1,42 @@
+<div class="well">
+  {{$ctrl.title}}
+  <uib-accordion>
+
+    <div uib-accordion-group
+        class="panel-default"
+        ng-repeat="item in $ctrl.data track by $index"
+        is-open="$index"
+      >
+      <div uib-accordion-heading>
+        <h5>{{item.medicinalProduct}}</h5>
+      </div>
+      <span>
+        <p>
+          <strong>
+            Autorization Number:
+          </strong>
+          {{item.autorizationNumber}}
+        </p>
+        <p>
+          <strong>
+            Dosage Text:
+          </strong>
+          {{item.DosageText}}
+        </p>
+        <p>
+          <strong>
+            Medicinal Product:
+          </strong>
+          {{item.medicinalProduct}}
+        </p>
+        <p>
+          <strong>
+            DrugvIndication:
+          </strong>
+          {{item.drugIndication}}
+        </p>
+      </span>
+    </div>
+
+  </uib-accordion>
+</div>

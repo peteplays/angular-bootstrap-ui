@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8">
+    <patient-block-component
+      ng-repeat="record in $ctrl.data track by record._id"
+      record="record"
+    >
+    </patient-block-component>
+  </div>
+</div>
+
+<div class="row" ng-if="$ctrl.patientCount">
+  <div class="text-center">
+    <ul uib-pagination
+        total-items="$ctrl.patientCount"
+        ng-model="$ctrl.paginationCurrentPage"
+        max-size="$ctrl.paginationNumberDisplay"
+        class="pagination-sm btn-info"
+        boundary-links="true"
+        num-pages="$ctrl.paginationNumPages"
+        previous-text="&lsaquo;"
+        next-text="&rsaquo;"
+        first-text="&laquo;"
+        last-text="&raquo;"
+        ng-click="$ctrl.listPatients($ctrl.paginationCurrentPage,$ctrl.paginationItemsPerPage)"
+    >
+    </ul>
+  </div>
+</div>

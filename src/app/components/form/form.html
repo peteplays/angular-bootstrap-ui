@@ -1,0 +1,100 @@
+<div class="row form-section">
+
+  <div class="col-md-offset-4 col-md-4">
+    <form class="" novalidate>
+      <div class="form-group">
+        <label>Receive Date</label>
+        <input type="text" class="form-control" placeholder="Receive Date" ng-model="$ctrl.formData.receiveDate">
+      </div>
+      <div class="form-group">
+        <label>Receipt Date</label>
+        <input type="text" class="form-control" placeholder="Receipt Date" ng-model="$ctrl.formData.receiptDate">
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control" placeholder="Age" ng-model="$ctrl.formData.patient.age">
+      </div>
+      <div class="form-group">
+        <label>Sex</label>
+        <input type="text" class="form-control" placeholder="Sex" ng-model="$ctrl.formData.patient.sex">
+      </div>
+      <div class="form-group">
+        <label>Safety Report Id</label>
+        <input type="text" class="form-control" placeholder="Safety Report Id" ng-model="$ctrl.formData.safetyReportId">
+      </div>
+      <div class="form-group">
+        <label>Company Number</label>
+        <input type="text" class="form-control" placeholder="Company Number" ng-model="$ctrl.formData.companyNumber">
+      </div>
+
+      <hr>
+      <h4 class="text-center mbN-18">Drugs</h4>
+      <div ng-repeat="record in $ctrl.formData.patient.drugs track by $index"
+          ng-if="!$ctrl.showAddFields"
+          >
+        <form-nested-arr-component
+          record="record"
+          type="drugs"
+          arr-index="{{$index}}"
+          >
+        </form-nested-arr-component>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-info btn-block"
+        name="button"
+        ng-click="$ctrl.addDrugFields()"
+        ng-if="$ctrl.showAddFields"
+      >
+        Add Reaction
+      </button>
+      <div ng-repeat="record in $ctrl.drugs track by $index"
+           ng-if="$ctrl.showAddFields"
+          >
+        <add-field-component
+          record="record"
+          type="drugs"
+          arr-index="{{$index}}"
+          >
+        </add-field-component>
+      </div>
+
+      <hr>
+      <h4 class="text-center mbN-18">Reactions</h4>
+      <div ng-repeat="record in $ctrl.formData.patient.reaction track by $index"
+          ng-if="!$ctrl.showAddFields"
+          >
+        <form-nested-arr-component
+          record="record"
+          type="reaction"
+          arr-index="{{$index}}"
+          >
+        </form-nested-arr-component>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-info btn-block"
+        name="button"
+        ng-click="$ctrl.addReactionField()"
+        ng-if="$ctrl.showAddFields"
+      >
+        Add Reaction
+      </button>
+      <div ng-repeat="record in $ctrl.reactions track by $index"
+           ng-if="$ctrl.showAddFields"
+          >
+        <add-field-component
+          record="record"
+          type="reaction"
+          arr-index="{{$index}}"
+          >
+        </add-field-component>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block submit-btn" ng-click="$ctrl.submitBtn($ctrl.formData)">Submit</button>
+    </form-drugs>
+  </div>
+
+</div>

@@ -1,0 +1,7 @@
+<nav-bar-component nav="$ctrl.navButtonRefs" current-page="$ctrl.currentPage"></nav-bar-component>
+<div class="container main-container">
+  <list-component ng-if="$ctrl.displaying == 'list'"></list-component>
+  <form-component ng-if="$ctrl.displaying == 'form'"></form-component>
+</div>
+<nav-bottom-component nav="$ctrl.navButtonRefs" current-page="$ctrl.currentPage" class="visible-xs-block nav-bottom-section"></nav-bottom-component>
+<footer-component></footer-component>

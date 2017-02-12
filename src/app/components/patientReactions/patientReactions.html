@@ -1,0 +1,8 @@
+<div class="well">
+  {{$ctrl.title}}
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in $ctrl.data track by $index">
+      {{item.meddraPrimaryTerm}}
+    </li>
+  </ul>
+</div>

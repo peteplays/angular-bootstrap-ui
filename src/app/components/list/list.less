@@ -1,0 +1,19 @@
+@import '../../vars.less';
+
+.pagination{
+  a{
+    color: #777 !important;
+  }
+  li.active{
+    a{
+      border-radius: 3px;
+      background-color: @color-1;
+      border: 1px solid darken(@color-1, 10%);
+      &:hover{
+        background-color: darken(@color-1, 10%);
+        border: 1px solid darken(@color-1, 20%);
+        color: #333;
+      }
+    }
+  }
+}
