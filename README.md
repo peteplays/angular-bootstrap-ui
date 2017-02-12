@@ -19,7 +19,7 @@
 `npm test`
 
 ### DB Access
-clone and run this repo `git address`
+clone and run this repo [https://github.com/peteplays/mongo-backen](https://github.com/peteplays/mongo-backen)
 
 set `DB_URL` in `src/app/app.js`
 
