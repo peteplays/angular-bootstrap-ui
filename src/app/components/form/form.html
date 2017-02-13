@@ -40,15 +40,6 @@
         </form-nested-arr-component>
       </div>
 
-      <button
-        type="button"
-        class="btn btn-info btn-block"
-        name="button"
-        ng-click="$ctrl.addDrugFields()"
-        ng-if="$ctrl.showAddFields"
-      >
-        Add Reaction
-      </button>
       <div ng-repeat="record in $ctrl.drugs track by $index"
            ng-if="$ctrl.showAddFields"
           >
@@ -59,6 +50,15 @@
           >
         </add-field-component>
       </div>
+      <button
+        type="button"
+        class="btn btn-info btn-block"
+        name="button"
+        ng-click="$ctrl.addDrugFields()"
+        ng-if="$ctrl.showAddFields"
+      >
+        Add Drug
+      </button>
 
       <hr>
       <h4 class="text-center mbN-18">Reactions</h4>
@@ -73,15 +73,6 @@
         </form-nested-arr-component>
       </div>
 
-      <button
-        type="button"
-        class="btn btn-info btn-block"
-        name="button"
-        ng-click="$ctrl.addReactionField()"
-        ng-if="$ctrl.showAddFields"
-      >
-        Add Reaction
-      </button>
       <div ng-repeat="record in $ctrl.reactions track by $index"
            ng-if="$ctrl.showAddFields"
           >
@@ -92,6 +83,15 @@
           >
         </add-field-component>
       </div>
+      <button
+        type="button"
+        class="btn btn-info btn-block"
+        name="button"
+        ng-click="$ctrl.addReactionField()"
+        ng-if="$ctrl.showAddFields"
+      >
+        Add Reaction
+      </button>
 
       <button type="submit" class="btn btn-success btn-block submit-btn" ng-click="$ctrl.submitBtn($ctrl.formData)">Submit</button>
     </form-drugs>

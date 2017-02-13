@@ -13,12 +13,12 @@ module.exports = ['$http', '$q',  function($http, $q) {
         });
       return deferred.promise;
     },
-    updateAddPatient: function(record) {
+    updatePatient: function(record) {
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: DB_URL+'updateAddPatient/',
-        data: {"find": {"_id": record._id},"update": record}
+        url: DB_URL+'updatePatient/',
+        data: {"find": {"_id": record._id}, "update": record}
       })
         .then(function(d) {
           return deferred.resolve(d);
