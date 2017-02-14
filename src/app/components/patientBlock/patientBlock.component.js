@@ -7,8 +7,19 @@ module.exports = angular.module('PatientBlock', [])
       record: '<'
     },
     template: require('./patientBlock.html'),
-    controller: function ($scope) {
+    controller: function ($scope, $route, listService) {
       this.names = ['Ashley', 'Bella', 'Charles', 'Dave', 'Elle', 'Frank', 'Gerold', 'Hank', 'Ivan', 'Jimi'];
+
+      this.deletePatient = function(patientId) {
+        listService.deletePatient(patientId)
+          .then(function(d) {
+            if (d.statusText == "OK") { $route.reload(); }
+            return d;
+          })
+          .catch(function(e) {
+            console.log({'error': e, 'on': 'deletePatient-controller'});
+          });
+      };
 
       this.createName = function(num) {
         try{
@@ -33,6 +44,6 @@ module.exports = angular.module('PatientBlock', [])
       this.collapseToggle = function(val) {
         return (_.isUndefined(val)) ? true : (val == true) ? false : true;
       };
-      
+
     }
   }).name;

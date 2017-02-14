@@ -13,12 +13,21 @@
   <div class="btn-group w1">
     <a type="button"
        class="btn btn-info"
-       ng-class="{'well-showing-right': $ctrl.$index == true}"
        href="/edit/{{$ctrl.record._id}}"
       >
       Edit
       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
     </a>
+  </div>
+  <div class="btn-group w1">
+    <button type="button"
+            class="btn btn-delete"
+            ng-class="{'well-showing-right': $ctrl.$index == true}"
+            ng-click="$ctrl.deletePatient($ctrl.record._id)"
+          >
+        Delete
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    </button>
   </div>
 </div>
 <div uib-collapse="$ctrl.collapseToggle($ctrl.$index)">

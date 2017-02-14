@@ -15,7 +15,8 @@ module.exports = angular.module('List', [])
           })
           .then(function() {
             this.countPatients;
-          }).catch(function(e){
+          })
+          .catch(function(e) {
             console.log({'error': e, 'on': 'listPatients-controller'});
           });
       };
@@ -27,7 +28,8 @@ module.exports = angular.module('List', [])
           })
           .then(function() {
             this.countPatients;
-          }).catch(function(e){
+          })
+          .catch(function(e) {
             console.log({'error': e, 'on': 'updatePatient-controller'});
           });
       };
@@ -36,7 +38,8 @@ module.exports = angular.module('List', [])
         listService.countPatients()
           .then(function(d) {
             that.patientCount = d.data.count;
-          }).catch(function(e){
+          })
+          .catch(function(e) {
             console.log({'error': e, 'on': 'countPatients-controller'});
           });
       };
