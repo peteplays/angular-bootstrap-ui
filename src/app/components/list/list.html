@@ -3,6 +3,8 @@
     <patient-block-component
       ng-repeat="record in $ctrl.data track by record._id"
       record="record"
+      class="patient-block"
+      id="{{record._id}}"
     >
     </patient-block-component>
   </div>

@@ -73,6 +73,6 @@ module.exports = angular.module('Form', [])
         that.reactions.push(ob);
       };
 
-      if( patientId) { this.getPatient(patientId); }
+      if(patientId) { this.getPatient(patientId); }
     }
   }).name;

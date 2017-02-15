@@ -10,10 +10,23 @@ module.exports = angular.module('PatientBlock', [])
     controller: function ($scope, $route, listService) {
       this.names = ['Ashley', 'Bella', 'Charles', 'Dave', 'Elle', 'Frank', 'Gerold', 'Hank', 'Ivan', 'Jimi'];
 
+      $scope.deleteElement = function(id) {
+        var docs = document.querySelectorAll('.patient-block');
+        docs.forEach(function(el) {
+          if(el.id == id) {
+            console.log('deleting ' + id);
+            el.remove();
+          }
+        });
+      };
+
       this.deletePatient = function(patientId) {
         listService.deletePatient(patientId)
           .then(function(d) {
-            if (d.statusText == "OK") { $route.reload(); }
+            if (d.statusText == "OK") {
+              // $route.reload();
+              $scope.deleteElement(d.data.data._id);
+            }
             return d;
           })
           .catch(function(e) {

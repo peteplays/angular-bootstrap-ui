@@ -37,8 +37,7 @@ module.exports = {
   },
   images: {
     src: [
-      src + '/app/images/**',
-      'node_modules/@jrs/map-common/src/images/**'
+      src + '/app/images/**'
     ],
     dest: dest + '/dist/images'
   }

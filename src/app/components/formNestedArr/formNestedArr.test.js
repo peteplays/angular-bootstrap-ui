@@ -12,12 +12,12 @@ describe('Component: fromNestedArr', function () {
     scope.$apply();
   }));
 
-    describe('addSpacesToCamelCase', function () {
-      it('should capitalize each word and add spaces', function () {
-        expect(controller.addSpacesToCamelCase('helloJohn')).toBe('Hello John');
-        expect(controller.addSpacesToCamelCase('heyJames')).toBe('Hey James');
-        expect(controller.addSpacesToCamelCase('HiJimi')).toBe('Hi Jimi');
-      });
+  describe('addSpacesToCamelCase', function () {
+    it('should capitalize each word and add spaces', function () {
+      expect(controller.addSpacesToCamelCase('helloJohn')).toBe('Hello John');
+      expect(controller.addSpacesToCamelCase('heyJames')).toBe('Hey James');
+      expect(controller.addSpacesToCamelCase('HiJimi')).toBe('Hi Jimi');
     });
+  });
 
 });
